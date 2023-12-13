@@ -62,6 +62,7 @@ class GameViewModel : ViewModel() {
 
 
     init {
+        Log.d("GameFragment", "GameViewModel created!")
         getNextWord()
     }
 
@@ -130,4 +131,9 @@ class GameViewModel : ViewModel() {
     }
 
     fun isGameOver() = isGameOver
+
+    override fun onCleared() {
+        super.onCleared()
+        Log.d("GameFragment", "GameViewModel destroyed!")
+    }
 }
